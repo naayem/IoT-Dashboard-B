@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "URvkZoGEjIU=",
+  "dgSpecHash": "c74KV00NjUE=",
   "success": true,
   "projectFilePath": "/home/robodiver/Documents/Projects/bobst_dashboard/src/IoTDashboard/IoTDashboard.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/robodiver/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/home/robodiver/.nuget/packages/moq/4.20.72/moq.4.20.72.nupkg.sha512",
+    "/home/robodiver/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
