@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Dashboard</title>
+</head>
+<body>
+    <h1>IoT Dashboard</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Device ID</th>
+                <th>Temperature (°C)</th>
+                <th>Humidity (%)</th>
+                <th>Last Update</th>
+            </tr>
+        </thead>
+        <tbody id="data-table">
+            <!-- Les données des appareils seront injectées ici -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchData() {
+            const response = await fetch('/api/devices');
+            const data = await response.json();
+            const tableBody = document.getElementById('data-table');
+            tableBody.innerHTML = ''; // Réinitialiser le tableau
+
+            data.forEach(device => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${device.id}</td>
+                    <td>${device.temperature.toFixed(2)} °C</td>
+                    <td>${device.humidity} %</td>
+                    <td>${new Date(device.lastUpdate).toLocaleString()}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Rafraîchir les données toutes les 5 secondes
+        setInterval(fetchData, 5000);
+
+        // Charger les données lors du chargement de la page
+        window.onload = fetchData;
+    </script>
+</body>
+</html>

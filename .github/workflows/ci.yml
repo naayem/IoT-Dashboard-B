@@ -1,4 +1,4 @@
-name: CI for IoT Dashboard
+name: CI Pipeline for IoT Dashboard
 
 on:
   push:
@@ -13,28 +13,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
+      # Étape 1 : Checkout du code
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Setup .NET SDK
+      # Étape 2 : Configuration de .NET Core 8.0
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '8.0.x'
 
-      # Restore dependencies
+      # Étape 3 : Restauration des dépendances pour l'application et les tests
       - name: Restore dependencies
-        run: dotnet restore ./src/IoTDashboard/IoTDashboard.csproj
+        run: dotnet restore
 
-      # Build the project
-      - name: Build the project
-        run: dotnet build --configuration Release ./src/IoTDashboard/IoTDashboard.csproj
-
-      # Test the project
+      # Étape 4 : Exécuter les tests unitaires et d'intégration
       - name: Run tests
-        run: dotnet test ./src/IoTDashboard/IoTDashboard.csproj
+        run: dotnet test IoTDashboard.Tests/IoTDashboard.Tests.csproj
 
-      # Build Docker image
+      # Étape 5 : Construire l'image Docker (si tous les tests passent)
       - name: Build Docker image
-        run: docker build -t iot-dashboard ./src/IoTDashboard
+        run: docker build -t your-dockerhub-username/iot-dashboard .
+
+      # Étape 6 : Pousser l'image Docker dans Docker Hub (facultatif)
+      - name: Push Docker image to Docker Hub
+        run: |
+          echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+          docker push your-dockerhub-username/iot-dashboard

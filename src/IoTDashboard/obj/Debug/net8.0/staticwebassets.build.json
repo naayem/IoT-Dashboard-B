@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "NZu4qJ5VabQXwVEHeRPTy8I+zA3Hwtd5sQl+eB4RHmA=",
+  "Hash": "0RaAtbzhd2Vm5UMTxN0l9Yb2LPAAdAObXEVA39+IrsU=",
   "Source": "IoTDashboard",
   "BasePath": "_content/IoTDashboard",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "IoTDashboard/wwwroot",
+      "Source": "IoTDashboard",
+      "ContentRoot": "/home/robodiver/Documents/Projects/bobst_dashboard/src/IoTDashboard/wwwroot/",
+      "BasePath": "_content/IoTDashboard",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/robodiver/Documents/Projects/bobst_dashboard/src/IoTDashboard/wwwroot/index.html",
+      "SourceId": "IoTDashboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/robodiver/Documents/Projects/bobst_dashboard/src/IoTDashboard/wwwroot/",
+      "BasePath": "_content/IoTDashboard",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ]
 }
