@@ -25,12 +25,16 @@ jobs:
 
       # Restore dependencies
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ./src/IoTDashboard/IoTDashboard.csproj
 
       # Build the project
       - name: Build the project
-        run: dotnet build --configuration Release
+        run: dotnet build --configuration Release ./src/IoTDashboard/IoTDashboard.csproj
 
       # Test the project
       - name: Run tests
-        run: dotnet test
+        run: dotnet test ./src/IoTDashboard/IoTDashboard.csproj
+
+      # Build Docker image
+      - name: Build Docker image
+        run: docker build -t iot-dashboard ./src/IoTDashboard
