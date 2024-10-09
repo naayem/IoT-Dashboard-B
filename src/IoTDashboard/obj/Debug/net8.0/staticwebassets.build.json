@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NZu4qJ5VabQXwVEHeRPTy8I+zA3Hwtd5sQl+eB4RHmA=",
+  "Source": "IoTDashboard",
+  "BasePath": "_content/IoTDashboard",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

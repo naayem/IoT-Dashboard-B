@@ -1,0 +1,7 @@
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_IoTDashboard.Tests
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/obj/Debug/net8.0/IoTDashboard.Tests.csproj.AssemblyReference.cache
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/obj/Debug/net8.0/IoTDashboard.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/obj/Debug/net8.0/IoTDashboard.Tests.AssemblyInfoInputs.cache
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/obj/Debug/net8.0/IoTDashboard.Tests.AssemblyInfo.cs
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/obj/Debug/net8.0/IoTDashboard.Tests.csproj.CoreCompileInputs.cache
+/home/robodiver/Documents/Projects/bobst_dashboard/IoTDashboard.Tests/obj/Debug/net8.0/IoTDashboard.Tests.sourcelink.json
